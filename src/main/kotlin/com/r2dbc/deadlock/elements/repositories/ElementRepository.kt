@@ -15,12 +15,12 @@ class ElementRepository(private val databaseClient: DatabaseClient) {
     val log: Logger = LoggerFactory.getLogger(ElementRepository::class.java)
 
     val myLookupQuery = """
-        Select TOP 100
-        FROM Elements
+        Select TOP 100 *
+        FROM dbo.Elements
     """.trimIndent()
 
     val myUpdateQuery = """
-        Update Elements
+        Update dbo.Elements
         SET new_data = :newData
         WHERE id = :id
     """.trimIndent()

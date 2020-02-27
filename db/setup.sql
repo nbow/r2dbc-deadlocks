@@ -2,10 +2,10 @@ CREATE DATABASE Deadlocks;
 GO
 USE Deadlocks;
 GO
-CREATE TABLE element (
-    id   INTEGER      NOT NULL AUTO_INCREMENT,
+CREATE TABLE dbo.Elements (
+    id   INTEGER      NOT NULL,
     data VARCHAR(128) NOT NULL,
-    newData VARCHAR(128) NULL,
+    new_data VARCHAR(128) NULL,
     PRIMARY KEY (id)
 );
 GO

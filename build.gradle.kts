@@ -21,11 +21,10 @@ repositories {
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
-    implementation("io.micrometer:micrometer-registry-prometheus")
-    implementation("io.projectreactor.kotlin:reactor-kotlin-extensions:1.0.0.RELEASE")
     implementation("org.springframework.boot.experimental:spring-boot-starter-data-r2dbc")
     implementation("org.springframework.boot:spring-boot-starter-json")
-    implementation("org.springframework.cloud:spring-cloud-gcp-starter-pubsub:1.2.1.RELEASE")
+    implementation("io.micrometer:micrometer-registry-prometheus")
+    implementation("io.projectreactor.kotlin:reactor-kotlin-extensions:1.0.0.RELEASE")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")

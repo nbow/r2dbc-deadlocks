@@ -1,6 +1,27 @@
 # r2dbc-deadlocks
+
 Example app with deadlock issues
 
+Select Java version when using jabbab
+```$xslt
+jabba use
+```
+Build the docker image
+```$xslt
+docker build -t deadlocks .
+```
+Start docker container
+```$xslt
+docker run -p 1433:1433 deadlocks
+```
+Start the app
+```$xslt
+./gradlew bootRun
+```
+
+While the application is running an external actor causes a deadlock and the below error is encountered.
+
+Example of error encountered
 ```$xslt
 {"timestamp":"2020-02-25 18:00:16.706",
 "level":"ERROR","thread":"reactor-tcp-nio-5",

@@ -17,6 +17,7 @@ class ElementService(private val elementRepository: ElementRepository) {
 
     fun lookup(): Flux<Element> {
         return elementRepository.findElements()
+                .doOnSubscribe { log.info("Looking for elements") }
                 .retry(5) { it is ConcurrencyFailureException }
                 .collectList()
                 .flatMapIterable(Function.identity())
